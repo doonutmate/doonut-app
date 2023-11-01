@@ -7,6 +7,5 @@ class ThemeService with ChangeNotifier {
     AppTheme? theme,
   }) : theme = theme ?? LightTheme();
 
-  /// 현재 테마
   AppTheme theme;
 }
