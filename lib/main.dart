@@ -3,7 +3,8 @@ import 'package:doonut/views/home_view.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-void main() {
+Future<void> main() async {
+  await fetchData();
   runApp(
     MultiProvider(
       providers: [
@@ -26,4 +27,16 @@ class MyApp extends StatelessWidget {
       home: HomeView(),
     );
   }
+}
+
+@Deprecated("API 로직 추가와 Init View 구현 시에 제거")
+Future<bool> fetchData() async {
+  bool data = false;
+
+  // Change to API call
+  await Future.delayed(Duration(seconds: 3), () {
+    data = true;
+  });
+
+  return data;
 }
