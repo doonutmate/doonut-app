@@ -35,7 +35,7 @@ Future<bool> fetchData() async {
   bool data = false;
 
   // Change to API call
-  await Future.delayed(Duration(seconds: 3), () {
+  await Future.delayed(Duration(seconds: 2), () {
     data = true;
   });
 
