@@ -1,5 +1,6 @@
 import 'package:doonut/services/theme_service.dart';
 import 'package:doonut/views/home_view.dart';
+import 'package:doonut/views/on_boarding_view.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeView(),
+      home: OnBoardingView(),
     );
   }
 }
@@ -34,7 +35,7 @@ Future<bool> fetchData() async {
   bool data = false;
 
   // Change to API call
-  await Future.delayed(Duration(seconds: 3), () {
+  await Future.delayed(Duration(seconds: 2), () {
     data = true;
   });
 

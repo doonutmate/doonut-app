@@ -8,6 +8,10 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+            'Main page'), // 한번 정해지면 바뀌지 않는 데이터를 사용하는 위젯 앞에는 const를 붙이도록 한다.
+      ),
       backgroundColor: context.watch<ThemeService>().theme.color.surface,
       body: Center(
           child: Text(
