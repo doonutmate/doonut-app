@@ -1,10 +1,16 @@
 import 'package:doonut/services/theme_service.dart';
-import 'package:doonut/views/home_view.dart';
 import 'package:doonut/views/on_boarding_view.dart';
 import 'package:flutter/material.dart';
+import 'package:kakao_flutter_sdk/kakao_flutter_sdk_template.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 Future<void> main() async {
+  await dotenv.load(fileName: 'assets/config/.env');
+  String? kakaoNativeAppKey = dotenv.env['KAKAO_NATIVE_APP_KEY'];
+  debugPrint('카카오 네이티브 앱 키 : $kakaoNativeAppKey');
+  KakaoSdk.init(nativeAppKey: kakaoNativeAppKey);
+
   await fetchData();
   runApp(
     MultiProvider(
