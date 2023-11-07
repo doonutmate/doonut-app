@@ -1,4 +1,5 @@
 import 'package:doonut/views/home_view.dart';
+import 'package:doonut/views/login_view.dart';
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 
@@ -22,7 +23,7 @@ class OnBoardingView extends StatelessWidget {
 class MyIntroductionScreen extends StatelessWidget {
   void _onIntroEnd(context) {
     Navigator.of(context).push(
-      MaterialPageRoute(builder: (_) => const HomeView()),
+      MaterialPageRoute(builder: (_) => const LoginView()),
     );
   }
 

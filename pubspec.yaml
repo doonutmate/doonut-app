@@ -109,3 +109,4 @@ flutter:
     - assets/onboarding/on_boarding3.png
     - assets/icons/
     - assets/images/
+    - assets/config/.env
