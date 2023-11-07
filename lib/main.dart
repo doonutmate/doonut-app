@@ -8,7 +8,7 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 Future<void> main() async {
   await dotenv.load(fileName: 'assets/config/.env');
   String? kakaoNativeAppKey = dotenv.env['KAKAO_NATIVE_APP_KEY'];
-  debugPrint('카카오계정 토큰 : $kakaoNativeAppKey');
+  debugPrint('카카오 네이티브 앱 키 : $kakaoNativeAppKey');
   KakaoSdk.init(nativeAppKey: kakaoNativeAppKey);
 
   await fetchData();
