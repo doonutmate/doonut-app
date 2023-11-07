@@ -101,4 +101,6 @@ flutter:
         - asset: assets/fonts/pretendard-Regular.otf
           weight: 400
   assets:
-    - assets/icons/
+    - assets/onboarding/on_boarding1.png
+    - assets/onboarding/on_boarding2.png
+    - assets/onboarding/on_boarding3.png
