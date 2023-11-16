@@ -93,7 +93,7 @@ class LoginView extends StatelessWidget {
                 }
                 if (token != null) {
                   debugPrint('카카오계정 토큰 $token');
-                  login(token.accessToken);
+                  login(token.accessToken, context);
                   // Navigator.of(context).push(
                   //   MaterialPageRoute(builder: (_) => const HomeView()),
                   // );
