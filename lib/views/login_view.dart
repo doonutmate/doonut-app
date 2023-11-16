@@ -1,3 +1,4 @@
+import 'package:doonut/services/auth/login_service.dart';
 import 'package:doonut/views/home_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -92,9 +93,10 @@ class LoginView extends StatelessWidget {
                 }
                 if (token != null) {
                   debugPrint('카카오계정 토큰 $token');
-                  Navigator.of(context).push(
-                    MaterialPageRoute(builder: (_) => const HomeView()),
-                  );
+                  login(token.accessToken, context);
+                  // Navigator.of(context).push(
+                  //   MaterialPageRoute(builder: (_) => const HomeView()),
+                  // );
                   // Map<String, dynamic>? response =
                   //     await userService.signInByKakaoToken(token.accessToken);
                 }
