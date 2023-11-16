@@ -11,7 +11,7 @@ abstract class Palette {
   static Color warningOrErrorTextColor = const Color(0xFFEB1E1E);
 
   // 백그라운드 색상
-  static Color backgroundColor = const Color(0xFFF9F9F9);
+  static Color backgroundColor = const Color(0xFFFFFFFF);
   static Color modalBackgroundColor = const Color(0xFFFFFFFF);
 
   // 안내 및 활성화 색상
