@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 Future<void> login(String kakaoToken, BuildContext context) async {
   try {
     final res = await NetworkHelper.dio.post(
-        'http://3.36.148.44:8081/oauth/login/KAKAO',
+        'http://3.36.148.44:8081/oauth/login?oauthType=KAKAO',
         data: {"accessToken": kakaoToken});
     print(res.data);
     Navigator.of(context).push(
